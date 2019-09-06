@@ -77,15 +77,18 @@ namespace GDP5
                 if(db.ContainsKey(country))
                 {
 
-                    string continent = db[country];
-                    /*Console.WriteLine(country);
+                    result[db[item[0]]]["GDP_2012"] += Convert.ToDouble(item[7]);
+                    result[db[item[0]]]["POPULATION_2012"] += Convert.ToDouble(item[4]);
+
+/*                    string continent = db[country];
+*/                    /*Console.WriteLine(country);
                     Console.WriteLine(continent);*/
 
                     /*a = Convert.ToDouble(item[4]);
                     b = Convert.ToDouble(item[7]);*/
-                    result[continent]["GDP_2012"] += Convert.ToDouble(item[7]);
+                   /* result[continent]["GDP_2012"] += Convert.ToDouble(item[7]);
                     result[continent]["POPULATION_2012"] += Convert.ToDouble(item[4]);
-
+*/
                 }
 
 
