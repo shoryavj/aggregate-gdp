@@ -27,7 +27,7 @@ namespace GDP5
 
         }
             public static void Prob()
-        { 
+        {  
             String path = @"C:\Users\CGI\GDP5\Data\datafile.csv";
 
             StreamReader sr = new StreamReader(path);
@@ -56,10 +56,8 @@ namespace GDP5
             var db = new Dictionary<string, string>();
 
             foreach(var country in o2)
-            {
-                db.Add((string)country["country"],(string)country["continent"]);
-                /*Console.WriteLine(db);*/
-            }
+             {
+                db.Add((string)country["country"],(string)country["continent"]);            }
             /*double a;
             double b;*/
             var result = new Dictionary<string, Dictionary<string, double>>();
@@ -80,31 +78,11 @@ namespace GDP5
                     result[db[item[0]]]["GDP_2012"] += Convert.ToDouble(item[7]);
                     result[db[item[0]]]["POPULATION_2012"] += Convert.ToDouble(item[4]);
 
-/*                    string continent = db[country];
-*/                    /*Console.WriteLine(country);
-                    Console.WriteLine(continent);*/
-
-                    /*a = Convert.ToDouble(item[4]);
-                    b = Convert.ToDouble(item[7]);*/
-                   /* result[continent]["GDP_2012"] += Convert.ToDouble(item[7]);
-                    result[continent]["POPULATION_2012"] += Convert.ToDouble(item[4]);
-*/
                 }
 
 
             }
 
-
-
-            /*foreach (var go in result)
-            {
-                Console.WriteLine($"{go.Key}");
-                foreach (var item2 in go.Value)
-                {
-                    Console.WriteLine($"Key: {item2.Key}, Value: {item2.Value}");
-                }
-                *//*Console.WriteLine(go.Value);*//*
-            }*/
 
 
             File.WriteAllText(outputPath, JsonConvert.SerializeObject(result));
