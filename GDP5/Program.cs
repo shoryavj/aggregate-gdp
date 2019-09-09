@@ -28,7 +28,7 @@ namespace GDP5
         }
             public static void Prob()
         {  
-            String path = @"C:\Users\CGI\GDP5\Data\datafile.csv";
+            String path = @"..\..\..\..\Data\datafile.csv";
 
             StreamReader sr = new StreamReader(path);
 
