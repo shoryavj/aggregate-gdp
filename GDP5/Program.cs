@@ -45,7 +45,7 @@ namespace GDP5
 
             }
 
-             String path2 = @"C:\Users\CGI\GDP5\Data\db.json";
+             String path2 = @"..\..\..\..\Data\db.json";
             //JArray o1 = JArray.Parse(File.ReadAllText(path2));
             StreamReader file = new StreamReader(path2);
             JsonTextReader reader = new JsonTextReader(file);
