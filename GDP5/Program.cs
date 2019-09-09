@@ -11,7 +11,7 @@ namespace GDP5
     public class Program
     {
 
-        private static string outputPath = @"..\..\..\..\actual-output.json";
+        private static string outputPath = @"../../../../actual-output.json";
 
         public static void Main(string[] args) {
             Prob();
@@ -28,7 +28,7 @@ namespace GDP5
         }
             public static void Prob()
         {  
-            String path = @"..\..\..\..\Data\datafile.csv";
+            String path = @"../../../../Data/datafile.csv";
 
             StreamReader sr = new StreamReader(path);
 
@@ -45,7 +45,7 @@ namespace GDP5
 
             }
 
-             String path2 = @"..\..\..\..\Data\db.json";
+             String path2 = @"../../../../Data/db.json";
             //JArray o1 = JArray.Parse(File.ReadAllText(path2));
             StreamReader file = new StreamReader(path2);
             JsonTextReader reader = new JsonTextReader(file);
